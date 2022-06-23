@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "c8874f81-46c9-4ac8-8a71-194d9fcf86e8",
+		"name": "django_rest_testcase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19794968"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/bills?client_id=1&org_id=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/bills?client_id=1&org_id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bills"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "1"
+						},
+						{
+							"key": "org_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clients",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/upload/",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Disposition",
+						"value": "attachment; filename=top3.xlsx",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "filename",
+						"value": "filename=top3.xlsx",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/Docs/Python/test/test_django/bills.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/upload/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"upload",
+						""
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "file_1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
